@@ -1,19 +1,19 @@
 import { useState } from "react";
-import { QuillEditor } from "./components/quill-editor";
-import { useQuillEditor } from "./hooks/use-quill-editor";
+import { SnowEditor } from "./components/snow-editor";
+import { BubbleEditor } from "./components/bubble-editor";
 
 export const App = () => {
-  const [value, setValue] = useState(`
-    <h1>Hello, World!</h1>`);
-  const { editorRef } = useQuillEditor();
+  const [value, setValue] = useState<string | null>(
+    '{"ops":[{"insert":"Hello, Quill!"}]}'
+  );
 
   return (
     <div>
-      <QuillEditor
-        editorRef={editorRef}
-        value={value}
-        onTextChange={setValue}
-      />
+      <SnowEditor value={value} onChange={setValue} />
+      <pre>{value}</pre>
+      <div className="">
+        <BubbleEditor value={value} />
+      </div>
     </div>
   );
 };
