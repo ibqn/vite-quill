@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <div className="flex flex-col gap-4 p-4">
       <SnowEditor value={value} onChange={setValue} />
-      <pre>{value}</pre>
+      <pre className="flex text-wrap">{value}</pre>
       <div className="my-4 border border-gray-300">
         <BubbleEditor value={value} />
       </div>
