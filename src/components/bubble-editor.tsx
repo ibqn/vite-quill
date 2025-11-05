@@ -20,7 +20,5 @@ export const BubbleEditor = ({ value }: BubbleEditorProps) => {
     editorRef.current?.setContents(delta)
   }, [delta, editorRef])
 
-  return (
-    <QuillEditor editorRef={editorRef} readOnly={true} defaultValue={delta} />
-  )
+  return <QuillEditor editorRef={editorRef} readOnly={true} defaultValue={delta} />
 }

@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { SnowEditor } from "./components/snow-editor";
-import { BubbleEditor } from "./components/bubble-editor";
+import { useState } from "react"
+import { SnowEditor } from "./components/snow-editor"
+import { BubbleEditor } from "./components/bubble-editor"
 
 export const App = () => {
   const [value, setValue] = useState<string | null>(
     '{"ops":[{"insert":"Hello, Quill!"}]}'
-  );
+  )
 
   return (
     <div>
@@ -15,5 +15,5 @@ export const App = () => {
         <BubbleEditor value={value} />
       </div>
     </div>
-  );
-};
+  )
+}

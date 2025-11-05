@@ -5,11 +5,7 @@ type QuillEditorProps = {
   editorRef: RefObject<Quill | null>
   defaultValue?: Delta
   onTextChange?: (delta: Delta, oldDelta: Delta, source: EmitterSource) => void
-  onSelectionChange?: (
-    range: Range,
-    oldRange: Range,
-    source: EmitterSource
-  ) => void
+  onSelectionChange?: (range: Range, oldRange: Range, source: EmitterSource) => void
   readOnly?: boolean
 }
 
@@ -41,9 +37,7 @@ export const QuillEditor = ({
       return
     }
 
-    const editorContainer = container.appendChild(
-      container.ownerDocument.createElement("div")
-    )
+    const editorContainer = container.appendChild(container.ownerDocument.createElement("div"))
 
     const quill = new Quill(editorContainer, {
       theme: readOnly ? "bubble" : "snow",

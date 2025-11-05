@@ -1,10 +1,8 @@
-import { useRef } from "react";
-import Quill from "quill";
+import { useRef } from "react"
+import Quill from "quill"
 
 export const useQuillEditor = () => {
-  const editorRef = useRef<Quill>(null);
+  const editorRef = useRef<Quill>(null)
 
-  return {
-    editorRef,
-  };
-};
+  return { editorRef }
+}
